@@ -1,0 +1,267 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="alchemy.css" />
+</head>
+
+
+<body>
+  <div class="alchemy" id="alchemy"></div>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <script src="alchemy.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/alchemyjs/0.4.2/scripts/vendor.js"></script>
+  <script type="text/javascript">
+   var text = "hello"
+   var zizek = "Slavoj Žižek points out in an article titled ‘How to renounce your passion: A Hegelian lesson on the ethics of marriage’  that during the Bolshevik revolution, a new form of love emerged. In this form, the love couple lives ‘in a permanent state of emergency, totally dedicated to the revolutionary Cause, ready to sacrifice all personal sexual fulfillment to it, even ready to abandon and betray each other if the Revolution demanded it, but simultaneously totally dedicated to each other, enjoying rare moments together with extreme intensity.’<br />" +
+	"<br />For Žižek, love co-exists with an engagement of political projects in the world.  The personal and the political go hand and hand. Although the personal is not the political in Žižek’s vision. Instead, love and political action are kept as two separate spheres that are radically apart. However, that radical apartness makes it possible for love and politics to exist side by side.<br/><br/>" +
+	"Žižek argues, ‘the radical disjunction between sexual passion and social-revolutionary activity is fully recognized. The two dimensions are accepted as totally heterogeneous, each irreducible to the other, there is no harmony between the two — but it is this very recognition of the gap that makes their relationship non-antagonistic.’" + "<br/><br/>" + 
+	"In this way, the phrase ‘They’re in love. Fuck the war.’ is telling. Pynchon has to separate the statement ‘Fuck the war’ from ‘They’re in love’ with a period. The two thoughts are only related in so far as they are separate. To pursue love means to ignore one’s duty. Likewise, to fulfill one’s duties is to ignore love. Though perhaps one day our material conditions will allow us to theorize further the possibility of love and politics past their separation.  I want to suggest the possibility of the role of love in society where a statement like ‘They’re in love—Fuck the War.’ can be generated. That is, where proclaiming love to another can change the world itself. After all, Barthes, calls love an obscenity.  It is now the space to think through how this obscenity of love can be used to change our conditions and conditioning. Perhaps the phrase ‘the personal is the political’ with respect to love refers to a utopian ideal in which one’s love for one another can be a political statement that changes the world itself. ‘They’re in love. Fuck the war.’ can mean something different than choosing the personal over the political. Perhaps, it could mean the ways lovers fuck the war is to rebel against (not ignore) the war in their passionate embrace." 
+
+	var deRouge = "One of the most impressive accounts of an historical analysis of love is Denis De Rougemont’s <i>Love in the Western World</i>, a sprawling book that argues the myth of Tristan and Iseult is embedded in the West’s conception of love." +	 
+"<br /><br />De Rougemont starts his book in the “background of paganism out of which the Tristan myth sprang”  through an analysis of the myth’s religious origins, starting its development through ritual with the Manicheans.  He most significantly grounds his thesis in an analysis of the Troubadours and their development of courtly love, which can be summarized by Guiraut Riquier, “sometimes referred to as the last of the troubadours” who writes “the five doors [of love] are Desire, Prayer, Service, Kissing, and Doing, whereby Love perishes.”  For De Rougemont, Arthurian romance (read, Tristan) comes from this conception of courtly love alongside Celtic myths.  Now it should be noted that this summary of De Rougemont does erase several of the nuances in his text. For one, he does not think love’s development in the West has a straightforward narrative. For example, he splits up multiple philosophies of love and shows how they intersect throughout Western history: troubadours elevate passion on the one hand, but the Platonists reject sensuality in favor of reason, yet nevertheless both viewpoints meet in the battleground of love through a figure like Dante." + 
+"<br /><br />From the religious origins of love, De Rougemont points out that when “myths lose their esoteric character and their sacred purpose they take on a literary form.”  As a result, he turns his analysis to Western literature from the 13th century all the way to the 20th century and argues that literature carries with it the Tristan myth all throughout the ages.  But looking at love in literature is not just an exercise in literary criticism. De Rougemont points out, “following La Rochefoucauld, that few people would fall in love had they never heard of love.”  In other words, the “latent feelings” of love are shaped by “certain linguistic conventions” which we best can bring out through an analysis of literature.  We are taught how to love by cultural notions we have of love. Those cultural notions of love, as De Rougemont has shown come from a lineage of thought tracing back to the 13th century." +  
+"<br /><br />Here we add that love is a linguistic term used to describe affective states we occupy that we can classify as love. We build a love “story” by assigning a grander meaning to make sense of the several momentary meanings of each affective “love” state we are in. These affective states themselves may not be socially constructed, but deciding to classify them as love is. As a result, feelings of friendship and fondness may be excluded from feelings of ‘true love’, but only because of our constructed notion of love."
+
+
+   
+   var json = 
+   {
+    "comment": "AlchemyJS contributors",
+    "nodes": [
+        {
+            "id": 0,
+            "caption": "On the Persistance of Love",
+			"name": "appear?",
+			"root": true
+        },
+        {
+            "id": 1,
+            "caption": "Thomas Pynchon",
+            "name": "hustonhedinger",
+            "cluster": 2
+        },
+        {
+            "id": 2,
+            "caption": "Slavoj Zizek",
+            "name": zizek,
+            "cluster": 3
+        },
+        {
+            "id": 3,
+            "caption": "Alain Badiou",
+            "name": "ifjorissen",
+            "cluster": 2
+        },
+        {
+            "id": 4,
+            "caption": "Roland Barthes",
+            "name": "MDCox",
+            "cluster": 1
+        },
+        {
+            "id": 5,
+            "caption": "Luce Irigaray",
+            "name": "DaveTorbeck",
+            "cluster": 1
+        },
+		{
+            "id": 6,
+            "caption": "Henri Lefebvre",
+			"name": "appear?",
+            "cluster": 1
+        },
+		{
+            "id": 7,
+            "caption": "The Wachowskis",
+			"name": "say?",
+            "cluster": 2
+        },
+		{
+            "id": 8,
+            "caption": "Jacques Lacan",
+			"name": "appear?",
+            "cluster": 1,
+			"root": true
+        },
+		{
+            "id": 9,
+            "caption": "Michael Hardt",
+			"name": "appear?",
+            "cluster": 1
+        },
+		{
+            "id": 10,
+            "caption": "André Bazin",
+			"name": "appear?",
+            "cluster": 1
+        },
+		{
+            "id": 11,
+            "caption": "Erich Fromm",
+			"name": "appear?",
+            "cluster": 1
+        },
+		{
+            "id": 12,
+            "caption": "Denis De Rougemont",
+			"name": deRouge,
+            "cluster": 1
+        },
+		{
+            "id": 13,
+            "caption": "Stanley Cavell",
+			"name": "appear?",
+            "cluster": 1
+        },
+		{
+            "id": 14,
+            "caption": "Eva Illouz",
+			"name": "appear?",
+            "cluster": 2
+        },
+		{
+            "id": 15,
+            "caption": "Jacques Derrida",
+			"name": "appear?",
+            "cluster": 2
+        }
+    ],
+    "edges": [
+        {
+            "source": 2,
+            "target": 0,
+            "caption": "Maintains"
+        },
+		
+		 {
+            "source": 1,
+            "target": 0,
+            "caption": "Maintains"
+        },
+		
+        {
+            "source": 3,
+            "target": 0,
+            "caption": "Maintains"
+        },
+        {
+            "source": 4,
+            "target": 0,
+            "caption": "Often Breaks"
+        },
+        {
+            "source": 5,
+            "target": 0,
+            "caption": "contributes"
+        },
+		{
+            "source": 6,
+            "target": 0,
+            "caption": "contributes"
+        },
+		{
+            "source": 7,
+            "target": 0,
+            "caption": "contributes"
+        },
+		{
+            "source": 8,
+            "target": 0,
+            "caption": "contributes"
+        },
+		{
+            "source": 9,
+            "target": 0,
+            "caption": "contributes"
+        },
+		{
+            "source": 10,
+            "target": 0,
+            "caption": "contributes"
+        },
+		{
+            "source": 11,
+            "target": 0,
+            "caption": "contributes"
+        },
+		{
+            "source": 12,
+            "target": 0,
+            "caption": "contributes"
+        },
+		{
+            "source": 13,
+            "target": 0,
+            "caption": "contributes"
+        },
+		{
+            "source": 14,
+            "target": 0,
+            "caption": "contributes"
+        },
+		{
+            "source": 3,
+            "target": 8,
+            "caption": "Maintains"
+        },
+		{
+            "source": 2,
+            "target": 8,
+            "caption": "Maintains"
+        },
+		{
+            "source": 15,
+            "target": 0,
+            "caption": "contributes"
+        }
+    ]
+	};
+	
+    var config = {
+      dataSource: json,
+	   cluster: true, 
+        clusterColours: ["#DD79FF", "#00FF30", "#5168FF", "#f83f00", "#ff8d8f"],
+	  "nodeCaption": "caption",
+	  "nodeCaptionsOnByDefault": true,
+	  "nodeTypes" : {"id": [1,2,3]},
+    "edgeTypes": {"caption": ["Maintains",
+                              "Contributes"]},
+    "nodeStyle": {
+        "project": {
+            color: "#000000",
+			borderColor: "#ffffff"
+
+        },
+			
+        "all":{
+            color: "#000000",
+            borderColor: "#ffffff",
+		},
+		
+		
+	},
+    "edgeStyle": {
+        "Maintains": {
+            "width": 6,
+            "color": "rgb(0,255,0)"
+        },
+        "contributes": {
+            color: "#ffffff",
+            borderWidth: 10
+        }
+    }
+    };
+	
+    
+    alchemy = new Alchemy(config);
+	alchemy2 = new Alchemy(config2);
+	function changeText(input)
+	{document.getElementById("main").innerHTML = input;}
+  </script>
+    <div class = "main" id="main" style="overflow-y:scroll; overflow-x:hidden; height:100%;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida metus ut arcu euismod, nec dapibus enim volutpat. Nulla interdum eros risus, sit amet lobortis lorem sagittis condimentum. Integer quam dolor, pellentesque sit amet tortor id, vehicula pulvinar erat. In hac habitasse platea dictumst. Donec fringilla facilisis ornare. Etiam euismod arcu in eros mollis sagittis. Curabitur convallis velit ut fringilla elementum. Pellentesque blandit nec est vitae accumsan. In hac habitasse platea dictumst. Vivamus velit diam, vulputate ac felis eu, faucibus egestas orci.
+
+Suspendisse feugiat ante tortor, et bibendum massa pulvinar at. Morbi porta diam at ligula pretium posuere. Morbi a finibus ante. Duis ac dolor a nisl hendrerit egestas. In vitae eros tempus quam fermentum maximus non efficitur elit. Donec quis pellentesque orci, ut lacinia ipsum. Donec at ullamcorper ex. Praesent at sagittis ex, quis tristique tortor. Nulla elementum diam lobortis sagittis commodo. Pellentesque ornare vel nibh egestas placerat. Donec blandit turpis a est elementum, nec mattis nibh tempor. Aenean vehicula nulla orci, a aliquet est ullamcorper ut. Quisque hendrerit ante ut leo gravida venenatis. </div>
+
+</body>
+
+</html>
